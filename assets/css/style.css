@@ -11,3 +11,16 @@ body {
     font-size: 1.2rem;
     background-color:  rgb(224, 224, 224);
 }
+
+/* Main heading */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 8rem;
+}
