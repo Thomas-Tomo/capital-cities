@@ -24,3 +24,16 @@ a {
     text-align: center;
     margin-top: 8rem;
 }
+
+/* Quiz interface container */
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+#quiz-area {
+    width: 25rem;
+}
