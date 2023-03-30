@@ -87,6 +87,41 @@ input {
     letter-spacing: 2px;
 }
 
+/* Quiz Area */
+
+.options-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(160, 214, 52);
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 1rem 0rem;
+    padding: 5px 10px;
+}
+
+.options-container:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 200ms;
+}
+
+#user-interface {
+    display: flex;
+    
+}
+
+.interface-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.interface-score {
+    text-align: center;
+}
+
+/* Footer */
+
 footer {
     text-align: center;
     font-style: italic;
