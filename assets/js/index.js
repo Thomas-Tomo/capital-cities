@@ -1,6 +1,15 @@
 let validate = document.getElementById("validation").innerText = "";
 const form = document.getElementById("user-form");
+let isVisible = false;
+let rules = "This quiz will put your knowledge\n" +
+    "to the test by asking you to select\n" +
+    "the correct capital city of the\n" +
+    "country in question. Choose the\n" +
+    "answer you think is correct and\n" +
+    "finish the quiz by trying to get\n" +
+    "all of the answers correct!";
 localStorage.setItem("username", ""); // Clear the value of the "username" key in local storage.
+
 
 // Add a click event listener to the "username-save-btn" element.
 document.getElementById("username-save-btn").addEventListener("click", saveUsername);
@@ -21,8 +30,8 @@ form.addEventListener("submit", function (event) {
 
     validate = document.getElementById("validation").innerText =
         `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
-    
-        form.style.display = "none"; // When username is set,hide the form element
+
+    form.style.display = "none"; // When username is set,hide the form element
 });
 
 // Add a click event listener to the "start-game-btn" element.
@@ -37,6 +46,16 @@ function initializeQuiz() {
     if (localStorage.getItem("username") === "") {
         validate = document.getElementById("validation").innerText = "Please set a username first!";
     } else {
-        window.location.href = "./quiz.html"; 
+        window.location.href = "./quiz.html";
     }
+}
+
+function howToPlay() {
+
+    if (isVisible) {
+        document.getElementById("how-to-play").innerText = "";
+    } else {
+        document.getElementById("how-to-play").innerText = rules;
+    }
+    isVisible = !isVisible
 }
