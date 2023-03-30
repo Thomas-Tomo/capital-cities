@@ -2,7 +2,7 @@ const question = document.getElementById("questions");
 const progress = document.getElementById("progress");
 const scoreCount = document.getElementById("score");
 const options = Array.from(document.getElementsByClassName("option"));
-let score;
+let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let ongoingQuestion = {};
@@ -10,8 +10,7 @@ let correctAnswers = true;
 
 
 // Quiz questions
-let questionsArray = [
-    {
+let questionsArray = [{
         question: "What is the capital city of Spain?",
         option1: "Madrid",
         option2: "Barcelona",
@@ -131,11 +130,11 @@ const maxQuestions = 10;
 
 /** Resets the quiz state and start a new game. */
 const startGame = () => {
-    
+
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questionsArray];
-    getNewQuestion()
+    getNewQuestion();
 };
 
 const getNewQuestion = () => {
@@ -147,12 +146,17 @@ const getNewQuestion = () => {
         localStorage.setItem("mostRecentScore", score);
         return window.location.assign("#")
     }
-    
+
+    // Update the question counter
+    questionCounter++
+    progress.innerText = `Question ${questionCounter} of ${maxQuestions}`;
+
+
     // Choose a random question from the list of available questions and display it.
     const randomQuestion = Math.floor(Math.random() * availableQuestions.length);
     ongoingQuestion = availableQuestions[randomQuestion];
     question.innerText = ongoingQuestion.question;
-    
+
     // Display the answer option for the current question.
     options.forEach(option => {
         const number = option.dataset.number;
@@ -169,8 +173,8 @@ options.forEach(option => {
     option.addEventListener("click", event => {
 
         // Check if an answer has already been submitted for this question
-        if(!correctAnswers) return;
-        
+        if (!correctAnswers) return;
+
         // Prevent submitting multiple answers for the same question
         correctAnswers = false;
 
@@ -178,7 +182,12 @@ options.forEach(option => {
         const isCorrect = ongoingQuestion.answer === selectedOption.innerText;
         const classToApply = isCorrect ? "correct" : "incorrect";
 
+        
         selectedOption.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedOption.parentElement.classList.remove(classToApply);
+        }, 800);
 
     });
 });
