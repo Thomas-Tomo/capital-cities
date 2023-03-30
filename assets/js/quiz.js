@@ -148,9 +148,10 @@ const getNewQuestion = () => {
         return window.location.assign("#")
     }
 
-    // Update the question counter
+    // Update the question counter and progress bar.
     questionCounter++
     progress.innerText = `Question ${questionCounter} of ${maxQuestions}`;
+    progressBarComplete.style.width = `${(questionCounter / maxQuestions) * 100}%`
 
 
     // Choose a random question from the list of available questions and display it.
