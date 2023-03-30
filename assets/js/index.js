@@ -33,6 +33,6 @@ function initializeQuiz() {
     if (localStorage.getItem("username") === "") {
         validate = document.getElementById("validation").innerText = "Please set a username first!";
     } else {
-        window.location.href = "./quiz.html";
+        window.location.href = "./quiz.html"; 
     }
 }
