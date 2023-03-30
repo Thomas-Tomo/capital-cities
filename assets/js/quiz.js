@@ -10,7 +10,8 @@ let correctAnswers = true;
 
 
 // Quiz questions
-let questionsArray = [{
+let questionsArray = [
+    {
         question: "What is the capital city of Spain?",
         option1: "Madrid",
         option2: "Barcelona",
@@ -182,7 +183,11 @@ options.forEach(option => {
         const isCorrect = ongoingQuestion.answer === selectedOption.innerText;
         const classToApply = isCorrect ? "correct" : "incorrect";
 
-        
+        if (isCorrect) {
+            incrementScore(scorePoints);
+        }
+
+
         selectedOption.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
@@ -192,5 +197,10 @@ options.forEach(option => {
 
     });
 });
+
+const incrementScore = num => {
+    score += num;
+    scoreCount.innerText = score;
+};
 
 startGame()
