@@ -1,10 +1,12 @@
 const question = document.getElementById("questions");
 const progress = document.getElementById("progress");
 const scoreCount = document.getElementById("score");
+const options = document.getElementById("option").innerText;
 let score;
 let questionCounter = 0;
 let availableQuestions = [];
 let ongoingQuestion = {};
+let correctAnswers = true;
 
 
 // Quiz questions
@@ -151,6 +153,10 @@ const getNewQuestion = () => {
     ongoingQuestion = availableQuestions[randomQuestion];
     question.innerText = ongoingQuestion.question;
     
+    options.forEach(option => {
+        const number = option.data-number;
+        option.innerText = ongoingQuestion["option" + number];
+    })
 }
 
 startGame()
