@@ -1,6 +1,10 @@
 const question = document.getElementById("questions");
 const progress = document.getElementById("progress");
 const scoreCount = document.getElementById("score");
+let score;
+let questionCounter = 0;
+let availableQuestions = [];
+
 
 // Quiz questions
 let questionsArray = [
@@ -123,5 +127,13 @@ const scorePoints = 10;
 const maxQuestions = 10;
 
 const startGame = () => {
-    // start game function
+    
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [questionsArray];
+    getNewQuestion
+}
+
+const getNewQuestion = () => {
+    console.log("It is getting new question")
 }
