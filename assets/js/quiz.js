@@ -187,6 +187,7 @@ options.forEach(option => {
 
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(classToApply);
+            getNewQuestion();
         }, 800);
 
     });
