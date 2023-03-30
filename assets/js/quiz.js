@@ -153,10 +153,14 @@ const getNewQuestion = () => {
     ongoingQuestion = availableQuestions[randomQuestion];
     question.innerText = ongoingQuestion.question;
     
+    // Display the answer option for the current question.
     options.forEach(option => {
         const number = option.dataset.number;
         option.innerText = ongoingQuestion["option" + number];
     });
+
+    // Remove the current question from the list of available questions.
+    availableQuestions.splice(randomQuestion, 1);
 }
 
 startGame()
