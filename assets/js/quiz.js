@@ -138,16 +138,19 @@ const startGame = () => {
 
 const getNewQuestion = () => {
 
+    // Checks if there are no more available questions or if the maximum number of questions has been reached.
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
 
+        //  Feature: This will save users score when the quiz ends 
         localStorage.setItem("mostRecentScore", score);
         return window.location.assign("#")
     }
     
+    // Choose a random question from the list of available questions and display it.
     const randomQuestion = Math.floor(Math.random() * availableQuestions.length);
     ongoingQuestion = availableQuestions[randomQuestion];
     question.innerText = ongoingQuestion.question;
-    console.log(question.innerText)
+    
 }
 
 startGame()
