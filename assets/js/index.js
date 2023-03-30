@@ -53,6 +53,10 @@ function initializeQuiz() {
 // Add a click event listener to the "how-to-play-btn element".
 document.getElementById("how-to-play-btn").addEventListener("click", howToPlay);
 
+/** Toggles the visibility of the "how to play section".
+ * Uses the global variable isVisible to keep track of current visibility state.
+ * If "isVisible" is true hide quiz rules, otherwise display quiz rules.
+ */
 function howToPlay() {
 
     if (isVisible) {
