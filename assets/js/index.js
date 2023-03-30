@@ -50,6 +50,9 @@ function initializeQuiz() {
     }
 }
 
+// Add a click event listener to the "how-to-play-btn element".
+document.getElementById("how-to-play-btn").addEventListener("click", howToPlay);
+
 function howToPlay() {
 
     if (isVisible) {
@@ -57,5 +60,5 @@ function howToPlay() {
     } else {
         document.getElementById("how-to-play").innerText = rules;
     }
-    isVisible = !isVisible
+    isVisible = !isVisible; // Toggle the value of the isVisible variable.
 }
