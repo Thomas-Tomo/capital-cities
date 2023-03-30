@@ -4,6 +4,7 @@ const scoreCount = document.getElementById("score");
 let score;
 let questionCounter = 0;
 let availableQuestions = [];
+let ongoingQuestion = {};
 
 
 // Quiz questions
@@ -131,10 +132,22 @@ const startGame = () => {
     
     questionCounter = 0;
     score = 0;
-    availableQuestions = [questionsArray];
-    getNewQuestion
+    availableQuestions = [...questionsArray];
+    getNewQuestion()
 }
 
 const getNewQuestion = () => {
-    console.log("It is getting new question")
+
+    if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+
+        localStorage.setItem("mostRecentScore", score);
+        return window.location.assign("#")
+    }
+    
+    const randomQuestion = Math.floor(Math.random() * availableQuestions.length);
+    ongoingQuestion = availableQuestions[randomQuestion];
+    question.innerText = ongoingQuestion.question;
+    console.log(question.innerText)
 }
+
+startGame()
