@@ -1,7 +1,7 @@
 const question = document.getElementById("questions");
 const progress = document.getElementById("progress");
 const scoreCount = document.getElementById("score");
-const options = document.getElementById("option").innerText;
+const options = Array.from(document.getElementsByClassName("option"));
 let score;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -154,9 +154,9 @@ const getNewQuestion = () => {
     question.innerText = ongoingQuestion.question;
     
     options.forEach(option => {
-        const number = option.data-number;
+        const number = option.dataset.number;
         option.innerText = ongoingQuestion["option" + number];
-    })
+    });
 }
 
 startGame()
