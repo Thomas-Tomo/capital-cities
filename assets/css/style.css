@@ -108,7 +108,7 @@ input {
 
 #user-interface {
     display: flex;
-
+    justify-content: space-between;
 }
 
 .interface-text {
@@ -118,6 +118,7 @@ input {
 
 .interface-score {
     text-align: center;
+    font-size: 2.4rem;
 }
 
 /* Targeted by JS */
@@ -128,6 +129,20 @@ input {
 /* Targeted by JS */
 .incorrect {
     background-color: rgb(255, 9, 9);
+}
+
+#progressBar {
+    width: 160%;
+    height: 30%;
+    margin-top: 0.8rem;
+    border: 3px solid rgb(160, 214, 52);
+    border-radius: 10px;
+}
+
+#progressBarComplete {
+    height: 100%;
+    background-color: rgb(160, 214, 52);
+    width: 0%;
 }
 
 /* Footer */
