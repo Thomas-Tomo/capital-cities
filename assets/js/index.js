@@ -28,6 +28,10 @@ form.addEventListener("submit", function (event) {
 // Add a click event listener to the "start-game-btn" element.
 document.getElementById("start-game-btn").addEventListener("click", initializeQuiz);
 
+/** Checks whether the user has set a username in local storage.
+ * If username is not set, display message asking the user to set a username.
+ * Otherwise, redirect user to the quiz page.
+ */
 function initializeQuiz() {
 
     if (localStorage.getItem("username") === "") {
