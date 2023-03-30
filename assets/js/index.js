@@ -13,14 +13,15 @@ function saveUsername() {
 
 // Add a "submit" event listener to the form element.
 form.addEventListener("submit", function (event) {
-    
+
     event.preventDefault(); // Prevents default submission.
 
     const input = document.getElementById("username");
     input.value = ""; // Clear the input value.
 
-    validate.innerText = `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
-    console.log(validate.innerText);
+    validate = document.getElementById("validation").innerText =
+        `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
+    console.log(validate);
 })
 
 // Add a click event listener to the "start-game-btn" element.
@@ -28,4 +29,7 @@ document.getElementById("start-game-btn").addEventListener("click", initializeQu
 
 function initializeQuiz() {
 
+    if (localStorage.getItem("username") === "") {
+        validate = document.getElementById("validation").innerText = "Please set a username first!";
+    }
 }
