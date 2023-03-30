@@ -126,6 +126,7 @@ let questionsArray = [
 const scorePoints = 10;
 const maxQuestions = 10;
 
+/** Resets the quiz state and start a new game. */
 const startGame = () => {
     
     questionCounter = 0;
