@@ -170,26 +170,30 @@ const getNewQuestion = () => {
     correctAnswers = true;
 };
 
+
+// Adds a click event listener to each option element.
 options.forEach(option => {
     option.addEventListener("click", event => {
 
-        // Check if an answer has already been submitted for this question
+        // Check if an answer has already been submitted for this question.
         if (!correctAnswers) return;
 
-        // Prevent submitting multiple answers for the same question
+        // Prevent submitting multiple answers for the same question.
         correctAnswers = false;
 
         const selectedOption = event.target;
         const isCorrect = ongoingQuestion.answer === selectedOption.innerText;
         const classToApply = isCorrect ? "correct" : "incorrect";
 
+        // If the answer is correct, increment the score by the scorePoints value.
         if (isCorrect) {
             incrementScore(scorePoints);
         }
 
-
+        // Apply the appropriate CSS class to the selected option's parent element.
         selectedOption.parentElement.classList.add(classToApply);
 
+        // After a short delay (800ms), remove the CSS class and retrieve a new question.
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(classToApply);
             getNewQuestion();
@@ -198,6 +202,9 @@ options.forEach(option => {
     });
 });
 
+/** Increases the value of the global variable "score" by the specified number,
+ * updates the text content of the "scoreCount" element to reflect the new score.
+ */
 const incrementScore = num => {
     score += num;
     scoreCount.innerText = score;
