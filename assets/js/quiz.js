@@ -136,7 +136,7 @@ const startGame = () => {
     score = 0;
     availableQuestions = [...questionsArray];
     getNewQuestion()
-}
+};
 
 const getNewQuestion = () => {
 
@@ -161,6 +161,26 @@ const getNewQuestion = () => {
 
     // Remove the current question from the list of available questions.
     availableQuestions.splice(randomQuestion, 1);
-}
+
+    correctAnswers = true;
+};
+
+options.forEach(option => {
+    option.addEventListener("click", event => {
+
+        // Check if an answer has already been submitted for this question
+        if(!correctAnswers) return;
+        
+        // Prevent submitting multiple answers for the same question
+        correctAnswers = false;
+
+        const selectedOption = event.target;
+        const isCorrect = ongoingQuestion.answer === selectedOption.innerText;
+        const classToApply = isCorrect ? "correct" : "incorrect";
+
+        selectedOption.parentElement.classList.add(classToApply);
+
+    });
+});
 
 startGame()
