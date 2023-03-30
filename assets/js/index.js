@@ -23,7 +23,7 @@ form.addEventListener("submit", function (event) {
         `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
     
         form.style.display = "none"; // When username is set,hide the form element
-})
+});
 
 // Add a click event listener to the "start-game-btn" element.
 document.getElementById("start-game-btn").addEventListener("click", initializeQuiz);
