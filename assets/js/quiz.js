@@ -118,3 +118,10 @@ let questionsArray = [
         answer: "Belgrade"
     }
 ];
+
+const scorePoints = 10;
+const maxQuestions = 10;
+
+const startGame = () => {
+    // start game function
+}
