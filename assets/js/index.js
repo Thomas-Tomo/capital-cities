@@ -21,7 +21,8 @@ form.addEventListener("submit", function (event) {
 
     validate = document.getElementById("validation").innerText =
         `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
-    console.log(validate);
+    
+        form.style.display = "none"; // When username is set,hide the form element
 })
 
 // Add a click event listener to the "start-game-btn" element.
