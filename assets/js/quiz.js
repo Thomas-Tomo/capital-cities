@@ -138,6 +138,11 @@ const startGame = () => {
     getNewQuestion();
 };
 
+/**Retrieves a new random question from the available questions list and updates the
+ * quiz interface with new questions and its options. If there are no more available
+ * questions or max amount of questions have been reached,
+ * it saves the user's score and redirect them to quiz-end.html page.
+ */
 const getNewQuestion = () => {
 
     // Checks if there are no more available questions or if the maximum number of questions has been reached.
