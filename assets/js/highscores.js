@@ -24,6 +24,15 @@ const printHighScore = () => {
     header2.innerText = "Score";
     header1.style.fontWeight = "bold";
     header2.style.fontWeight = "bold";
-}
+
+    highScores.forEach((score) => {
+        const row = table.insertRow();
+        const usernameCell = row.insertCell();
+        const scoreCell = row.insertCell();
+        usernameCell.innerText = score.username;
+        scoreCell.innerText = score.score;
+        scoreCell.style.color = "RGB(0, 0, 255)"; 
+    });
+};
 
 printHighScore()
