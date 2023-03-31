@@ -1,3 +1,6 @@
+/** Retrieves highscores from local storage,sorts them by score in descending order,
+ * and displays them in a table in the highscores.html page.
+ */
 const printHighScore = () => {
 
     // Retrieve highscores from local storage.
@@ -25,6 +28,7 @@ const printHighScore = () => {
     header1.style.fontWeight = "bold";
     header2.style.fontWeight = "bold";
 
+    // Loop through the highscores array and add a new row for each score.
     highScores.forEach((score) => {
         const row = table.insertRow();
         const usernameCell = row.insertCell();
