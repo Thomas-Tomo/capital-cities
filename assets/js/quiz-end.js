@@ -31,5 +31,7 @@ if (!existingArray) {
     existingArray = [];
 }
 
+existingArray.push(quizResult);
+
 // Save the updated array to local storage.
 localStorage.setItem("highscores", JSON.stringify(existingArray));
