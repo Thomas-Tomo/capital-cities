@@ -167,3 +167,48 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+/* Media Queries */
+
+/* For screens max-width 545px and down */
+
+@media screen and (max-width: 545px)  {
+    
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    #main-heading {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    #validation {
+        font-size: 1rem;
+    }
+
+    #username-save-btn {
+        margin-top: 1rem;
+    }
+
+    #how-to-play {
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    #progressBar {
+        width: 100%;
+    }
+
+    #score-result {
+        font-size: 1rem;
+    }
+
+    label {
+        display: none;
+    }
+}
