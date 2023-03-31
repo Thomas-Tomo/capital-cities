@@ -27,3 +27,6 @@ let existingArray = JSON.parse(localStorage.getItem("highscores"));
 if (!existingArray) {
     existingArray = [];
 }
+
+// Save the updated array to local storage.
+localStorage.setItem("highscores", JSON.stringify(existingArray));
