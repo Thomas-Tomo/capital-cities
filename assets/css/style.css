@@ -149,6 +149,15 @@ input {
     width: 0%;
 }
 
+/* Quiz end */
+
+#score-result {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 0.3rem;
+    border: 3px solid rgb(160, 214, 52);
+}
+
 /* Footer */
 
 footer {
