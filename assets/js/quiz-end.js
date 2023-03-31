@@ -3,6 +3,9 @@ let username = localStorage.getItem("username");
 let user = document.getElementById("user");
 let scoreResult = document.getElementById("score-result");
 
+
+const quizResult = {username: username, score: score};
+
 // Display quiz score to scoreResult inner text.
 scoreResult.innerText = `You scored ${mostRecentScore} out of 100 points!`;
 
