@@ -35,8 +35,8 @@ const printHighScore = () => {
         const scoreCell = row.insertCell();
         usernameCell.innerText = score.username;
         scoreCell.innerText = score.score;
-        scoreCell.style.color = "RGB(0, 0, 255)"; 
+        scoreCell.style.color = "RGB(0, 0, 255)";
     });
 };
 
-printHighScore()
+printHighScore();
