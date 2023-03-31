@@ -161,6 +161,23 @@ input {
 
 }
 
+/* Highscores table */
+
+#highscores {
+    margin-top: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#highscores tr {
+    background-color: rgb(160, 214, 52);
+    border: 3px solid black;
+}
+
+#highscores td {
+    padding: 0.3rem 0.5rem;
+}
+
 /* Footer */
 
 footer {
@@ -172,8 +189,8 @@ footer {
 
 /* For screens max-width 545px and down */
 
-@media screen and (max-width: 545px)  {
-    
+@media screen and (max-width: 545px) {
+
     body {
         font-size: 1rem;
     }
