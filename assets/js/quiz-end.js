@@ -31,7 +31,12 @@ if (!existingArray) {
     existingArray = [];
 }
 
-existingArray.push(quizResult);
+// Check if an object with the same properties already exist in the existingArray
+if (existingArray.some(item => JSON.stringify(item) === JSON.stringify(quizResult))) {
+    user.innerText = `Same score again ${username}!`;
+} else {
+    existingArray.push(quizResult);
+}
 
 // Save the updated array to local storage.
 localStorage.setItem("highscores", JSON.stringify(existingArray));
