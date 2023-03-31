@@ -20,7 +20,7 @@ if (mostRecentScore >= 90) {
 // Create an object that stores two properties.
 const quizResult = {
     username: username,
-    score: score
+    score: mostRecentScore
 };
 
 // Retrieve the existing array of objects from local storage.
