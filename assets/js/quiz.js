@@ -150,7 +150,7 @@ const getNewQuestion = () => {
 
         //  Feature: This will save users score when the quiz ends 
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("#")
+        return window.location.assign("quiz-end.html");
     }
 
     // Update the question counter and progress bar.
