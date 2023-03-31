@@ -156,6 +156,9 @@ input {
     margin-top: 2rem;
     padding: 0.5rem 0.3rem;
     border: 3px solid rgb(160, 214, 52);
+    border-radius: 10px;
+    background-color: white;
+
 }
 
 /* Footer */
