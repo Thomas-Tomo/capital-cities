@@ -1,5 +1,6 @@
 const question = document.getElementById("questions");
 const progress = document.getElementById("progress");
+const progressBarComplete = document.getElementById("progressBarComplete");
 const scoreCount = document.getElementById("score");
 const options = Array.from(document.getElementsByClassName("option"));
 let score = 0;
@@ -10,8 +11,7 @@ let correctAnswers = true;
 
 
 // Quiz questions
-let questionsArray = [
-    {
+let questionsArray = [{
         question: "What is the capital city of Spain?",
         option1: "Madrid",
         option2: "Barcelona",
@@ -154,9 +154,9 @@ const getNewQuestion = () => {
     }
 
     // Update the question counter and progress bar.
-    questionCounter++
+    questionCounter++;
     progress.innerText = `Question ${questionCounter} of ${maxQuestions}`;
-    progressBarComplete.style.width = `${(questionCounter / maxQuestions) * 100}%`
+    progressBarComplete.style.width = `${(questionCounter / maxQuestions) * 100}%`;
 
 
     // Choose a random question from the list of available questions and display it.
@@ -216,4 +216,4 @@ const incrementScore = num => {
     scoreCount.innerText = score;
 };
 
-startGame()
+startGame();
