@@ -26,12 +26,30 @@ form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevents default submission.
 
     const input = document.getElementById("username");
+
+    const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+    let usernameExists = false;
+
+    for (let i = 0; i < highScores.length; i++) {
+
+        if (highScores[i].username === input.value) {
+            usernameExists = true;
+            break;
+        }
+    }
+    // If username exists, ask user to choose a different username.
+    if (usernameExists) {
+        validate = document.getElementById("validation").innerText = "Please choose a different username";
+    } else {
+        validate = document.getElementById("validation").innerText =
+            `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
+
+        form.style.display = "none"; // When username is set,hide the form element
+    }
+
     input.value = ""; // Clear the input value.
 
-    validate = document.getElementById("validation").innerText =
-        `${localStorage.getItem("username")}, you are all set!`; // Sets a validation message
-
-    form.style.display = "none"; // When username is set,hide the form element
 });
 
 // Add a click event listener to the "start-game-btn" element.
