@@ -61,10 +61,18 @@ document.getElementById("start-game-btn").addEventListener("click", initializeQu
  */
 function initializeQuiz() {
 
-    if (localStorage.getItem("username") === "") {
+    const username = localStorage.getItem("username");
+    if (username === "") {
         validate = document.getElementById("validation").innerText = "Please set a username first!";
     } else {
-        window.location.href = "./quiz.html";
+        const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+        const usernameExists = highScores.some(score => score.username === username);
+
+        if (usernameExists) {
+            validate = document.getElementById("validation").innerText = "Please choose a different username";
+        } else {
+            window.location.href = './quiz.html';
+        }
     }
 }
 
