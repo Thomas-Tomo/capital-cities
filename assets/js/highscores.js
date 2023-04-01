@@ -12,6 +12,10 @@ const printHighScore = () => {
     // Get a reference to the table element.
     const table = document.getElementById("highscores");
 
+    // Hide element with the ID of "unlock"
+    const unlockTable = document.getElementById("unlock");
+    unlockTable.innerHTML = "";
+
     // Create table name row
     const nameRow = table.insertRow();
     const nameCell = nameRow.insertCell();
