@@ -43,4 +43,7 @@ const printHighScore = () => {
     });
 };
 
-printHighScore();
+// If there are any highscores in local storage, call printHighScore function
+if (localStorage.getItem("highscores")) {
+    printHighScore();
+}
