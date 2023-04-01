@@ -57,6 +57,7 @@ document.getElementById("start-game-btn").addEventListener("click", initializeQu
 
 /** Checks whether the user has set a username in local storage.
  * If username is not set, display message asking the user to set a username.
+ * If the username is taken ask the user to set a different username.
  * Otherwise, redirect user to the quiz page.
  */
 function initializeQuiz() {
