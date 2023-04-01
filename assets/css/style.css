@@ -45,6 +45,7 @@ a {
     font-weight: 600;
     font-size: 1.2rem;
     padding-bottom: 8px;
+    color: rgb(0, 0, 255);
 }
 
 .btn,
@@ -176,6 +177,12 @@ input {
 
 #highscores td {
     padding: 0.3rem 0.5rem;
+}
+
+#unlock {
+    margin-top: 1rem;
+    color: rgb(0, 0, 255);
+    font-weight: 600;
 }
 
 /* Footer */
