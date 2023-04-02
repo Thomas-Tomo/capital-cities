@@ -270,3 +270,33 @@ By forking the repository, we make a copy of the original repository on our GitH
 
 ---
 
+## Credits
+
+### Code
+
+ * I gained an understanding of JSON (JavaScript Object Notation) through the book 'JavaScript and jQuery' written by Jon Duckett.
+ * The README template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/readme-love-maths/blob/master/README.md)
+ * Mozilla Developer Network (MDN) for understanding JavaScript built-in methods.
+ * After reading 'JavaScript and jQuery' by Jon Duckett, I gained an understanding of localStorage and how it can be used in web development.
+ * MDN Web Docs: HTMLTableElement.insertRow(): [link](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow), helped me to understand insertRow() method.
+ * MDN Web Docs: [link]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), helped me understand arrow functions.
+ 
+ ### Content
+
+  * All content was written by the developer.
+  * [Font Awesome](https://fontawesome.com/) was used to obtain the free icon for the header.
+  * Same icon was used to create a favicon the the website.
+
+### Media
+
+ * [Font Awesome](https://fontawesome.com/)
+ * [Color Mind](http://colormind.io/)
+ * [Am I responsive?](https://ui.dev/amiresponsive)
+
+
+---
+
+## Acknowledgements
+
+ * My mentor Mitko Bachvarov provided helpful feedback.
+ * Slack community for encouragement.
