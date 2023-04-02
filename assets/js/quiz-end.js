@@ -33,7 +33,7 @@ if (!existingArray) {
 
 // Check if an object with the same properties already exist in the existingArray
 if (existingArray.some(item => JSON.stringify(item) === JSON.stringify(quizResult))) {
-    user.innerText = `Same score again ${username}!`;
+    user.innerText = `Check High Scores, ${username}!`;
 } else {
     existingArray.push(quizResult);
 }
