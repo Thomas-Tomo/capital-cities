@@ -127,3 +127,85 @@ Capital Cities quiz provides an enjoyable and educational experience that challe
 * To handle data in my JavaScript code, I used [JSON](https://en.wikipedia.org/wiki/JSON) as a data format.
 
 ---
+
+## Frameworks, Libraries & Programs Used
+
+* [Gitpod](https://www.gitpod.io/)
+    * To write the code.
+* [Git](https://git-scm.com/)
+    * for vesion control.
+* [Github](https://github.com/)
+    * Deployment of the website and storing the files online.
+* [Google Fonts](https://fonts.google.com/)
+    * Import main font the website.
+* [Am I Responsive](https://ui.dev/amiresponsive)
+    * Mockup picture for the README file.
+
+---
+
+## Testing
+
+The W3C Markup Validator, W3C CSS Validator and JSHint, a JavaScript Code Quality Tool were used to validate every html, css, and js file to ensure there were no errors.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [JSHint](https://jshint.com/)
+
+### Validation results
+
+<details>
+<summary>HTML files, no errors were returned when passing through the official W3C Markup Validator.
+</summary>
+
+![Home Page validation result](/assets/images/html-validation.PNG)
+</details>
+
+<details>
+<summary>CSS file, No errors were found when passing through the official W3C CSS Validator. 
+</summary>
+
+![Home Page validation result](/assets/images/css-validation.PNG)
+</details>
+
+### JSHint results
+
+<details>
+<summary>index.js, No errors were found when passing through the official Jshint validator.
+</summary>
+
+![Home Page validation result](/assets/images/index-js.PNG)
+</details>
+
+<details>
+<summary>quiz.js, No errors were found when passing through the official Jshint validator.
+</summary>
+
+![Home Page validation result](/assets/images/quiz-js.PNG)
+</details>
+
+<details>
+<summary>quiz-end.js, No errors were found when passing through the official Jshint validator.
+</summary>
+
+![Home Page validation result](/assets/images/quiz-end-js.PNG)
+</details>
+
+<details>
+<summary>highscores.js, No errors were found when passing through the official Jshint validator.
+</summary>
+
+![Home Page validation result](/assets/images/highscores-js.PNG)
+</details>
+
+### Manual Testing 
+
+* The website was tested on Google Chrome, Microsoft Edge, and Opera browsers.
+* The website was viewed on a desktop computer, laptop, tablet, and a variety of mobile phones, such as Samsung Galaxy A52.
+* A large amount of testing was done to ensure links between pages are working correctly on all pages.
+* Family and friends were asked to review the website for a better understanding of the user experience.
+* Family and friends were asked to play the quiz and give feedback.
+* Dev Tools was used to test how the site looks on various screen sizes.
+* Dev Tools Console was used to find any bugs that were not spotted.
+* Dev Tools Application's local storage used to track is the code functioning as intended.
+* Manually navigating to specific HTML pages by typing the URL of the page and checking the console and local storage.
+* JSHint was used to check quality of the code and any errors missed by the developer.
