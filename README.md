@@ -105,3 +105,25 @@ Capital Cities quiz provides an enjoyable and educational experience that challe
 * The quiz interface can include a timer feature to add an element of urgency to the game. 
 
 ---
+
+## Design
+
+ * Colour Scheme
+    * Primary colors used on the website: ![Color Scheme](/assets/images/color-scheme.PNG)
+
+ * Typography
+    * Domine font is the main font used throughout the website with serif as its fallback font.
+
+ * Wireframes
+    * Pen and paper in the notebook: simple and effective.
+
+---
+
+## Technologies Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* To handle data in my JavaScript code, I used [JSON](https://en.wikipedia.org/wiki/JSON) as a data format.
+
+---
