@@ -148,7 +148,7 @@ const getNewQuestion = () => {
     // Checks if there are no more available questions or if the maximum number of questions has been reached.
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
 
-        // Saves thw user's score in local storage and redirects them to quiz-end.html page.
+        // Saves the user's score in local storage and redirects them to quiz-end.html page.
         localStorage.setItem("mostRecentScore", score);
         return window.location.assign("quiz-end.html");
     }

@@ -62,7 +62,7 @@ document.getElementById("start-game-btn").addEventListener("click", initializeQu
  */
 function initializeQuiz() {
 
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("username") || "";
     if (username === "") {
         validate = document.getElementById("validation").innerText = "Please set a username first!";
     } else {
