@@ -209,3 +209,32 @@ The W3C Markup Validator, W3C CSS Validator and JSHint, a JavaScript Code Qualit
 * Dev Tools Application's local storage used to track is the code functioning as intended.
 * Manually navigating to specific HTML pages by typing the URL of the page and checking the console and local storage.
 * JSHint was used to check quality of the code and any errors missed by the developer.
+
+### Fixed Bugs
+
+* By manually navigating to specific HTML pages by typing the URL of the page and checking the console and local storage
+* By manually navigating to quiz-end.html there was a bug displaying null value of the username and score variables that were stored it the local storage.
+* Bug was fixed with window.location.href, if a user tries to navigate to the quiz-end.html manually it redirects them to the index.html page because they didin't play the quiz yet.
+* The code checks if the mostRecentScore is -1 and that is how it triggers the redirect to index.html page
+* If somebody decided to clear all key, value properties from the local storage they still would not be able to start the quiz.
+* The website is protected from users starting the game without a username.
+
+### Lighthouse Report
+
+#### Mobile analysis
+<details>
+<summary>Performance
+</summary>
+
+![Home Page lighthouse report](/assets/images/lighthouse-report-mobile.PNG)
+</details>
+
+#### Desktop analysis
+
+<details>
+<summary>Performance
+</summary>
+
+![Home Page lighthouse report](/assets/images/lighthouse-report-desktop.PNG)
+</details>
+
